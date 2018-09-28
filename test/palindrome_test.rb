@@ -8,4 +8,14 @@ class PalindromeTest < Minitest::Test
     actual = palindrome.longest_palindrome("babad")
     assert_equal expected, actual
   end
+
+  def test_it_finds_another
+    palindrome = Palindrome.new
+    expected1 = 'bb'
+    actual1 = palindrome.longest_palindrome('bb')
+    expected2 = 'racecar'
+    actual2 = palindrome.longest_palindrome('smtpracecartqur')
+    assert_equal expected1, actual1
+    assert_equal expected2, actual2
+  end
 end
